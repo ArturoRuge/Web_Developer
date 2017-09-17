@@ -1,0 +1,33 @@
+block config
+    include ../config/config.pug
+
+doctype html
+html
+    head
+        title #{pageTitle} | #{siteTitle}
+        meta(charset="utf-8")
+        meta(name="description" content=description)
+        link(rel="stylesheet" href="https://cdn.rawgit.com/escueladigital/EDgrid/23dc0bfe/css/ed-grid.min.css")
+        link(rel="stylesheet" href="css/styles.css")
+    body
+        header.main-header
+            a(href="/")
+                img(src="/img/logo.png" alt="Logo de la compañia").logo
+            nav.menu
+                include ../blocks/menu.pug
+        div
+            block banner
+                img(src="/img/" + currentPage + ".jpg")
+        
+        main
+            block main
+
+        
+        aside
+            block aside  
+                if siguenos  
+                    include ../blocks/siguenos.pug
+        footer
+            p Creativos ABC - Todos los derechos reservados
+            block footer
+            

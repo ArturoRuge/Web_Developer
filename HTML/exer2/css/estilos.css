@@ -2,18 +2,58 @@ body{
 	font-family: 'Allerta', sans-serif;
 	margin: 0;
 }
+table{
+	width: 100%;
+	border-collapse: collapse;
+}
+th{
+	background: #273b47;
+	color: white;
+	padding: 10px 20px;
+	text-align: left;
+}
+td{
+	padding: 20px;
+}
+table,
+td,
+th{
+	border: 1px solid #273b47;
+}
+input,
+textarea{
+	outline: 0;
+}
+input:focus, textarea:focus{
+	background: lightgray;
+}
+.contenedor{
+	width: 800px;
+	margin: auto;
+	position: relative;
+}
+.background{
+	background-image: url("../images/background.png");
+	background-size: cover;
+}
 .button{
-	border-radius: 5px;
+	border-radius: 12px;
 	background: #fd324e;
 	border:none;
 	color: white;
-	padding: 7px;
+	padding: 7px 12px;
+	font-size: 18px;
+	background: linear-gradient(to left, #f3344e #ff7250);
+	cursor: pointer;
 }
 .titulo{
 	font-family: 'Roboto', sans-serif;
 	font-size: 70px;
 	margin-bottom: 0;
 	margin-top: 70px;
+}
+.titulo span{
+	text-decoration: underline;
 }
 .title-a{
 	font-size: 24px;
@@ -25,6 +65,7 @@ body{
 }
 .guitarras{
 	color: #1F313C;
+	margin-bottom: 60px;
 }
 .guitarras h2{
 	font-family: 'Roboto', sans-serif;
@@ -34,12 +75,13 @@ body{
 	padding: 0;
 }
 .portada{
-	background-image: url("../images/background.png");
 	color: #fff;
 	padding: 20px;
+	height: 500px;
 }
 .portada button{
 	margin-bottom: 70px;
+
 }
 .menu{
 	font-size: 24px;
@@ -55,26 +97,29 @@ body{
 	content: "∘";
 	font-size: 50px;
 	line-height: 20px;
-	color: blue;
+	color: white;
+}
+.menu a{
+	color: white;
+	text-decoration: none;
 }
 .logotipo{
 	display: inline-block;
-}
-.contenedor{
-	width: 800px;
-	margin: auto;
+	margin-left: 0;
 }
 .guitarra{
-	margin: 10px;
+	margin: 10px 10px 40px 10px;
 	padding: 10px;
 /*	overflow: hidden;
 */	border: 1px solid #1F313C;
 	border-radius: 8px;
 }
+.guitarra.b{
+	height: 190px;
+}
 .left{
 	float: left;
 	position: relative;
-	top: 80px;
 }
 .right{
 	float: right;
@@ -86,12 +131,15 @@ body{
 }
 .contenedor-guitarra-b{
 	margin-left: 370px;
+	position: relative;
+	bottom: 90px;
 }
 header{
 	position: relative;
 }
 .footer{
 	background: #273b47;
+	padding: 50px 10px;
 }
 .contacto{
 	display: flex;
@@ -118,7 +166,7 @@ header{
 	display: flex;
 	width: 400px;
 	color: #fff;
-	padding: 50px 10px;
+
 }
 .col1,
 .col2{
@@ -127,6 +175,9 @@ header{
 }
 .col2{
 	align-items: flex-start;
+}
+.col2 .button{
+	margin-top: 10px;
 }
 .col1{
 	margin-right: 15px;
@@ -143,23 +194,7 @@ header{
 .sexo{
 	margin-top: 10px;
 }
-table{
-	width: 100%;
-	border-collapse: collapse;
+.tabla{
+	margin: 50px 0;
+}
 
-}
-th{
-	background: #273b47;
-	color: white;
-	padding: 10px 20px;
-	text-align: left;
-
-}
-td{
-	padding: 20px;
-}
-table,
-td,
-th{
-	border: 1px solid #273b47;
-}

@@ -1,0 +1,287 @@
+*{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+body{
+	background: #fff;
+	font-family: "Open Sans", Sans-serif;
+	font-size: 16px;
+}
+.contenedor{
+	width: 90%;
+	max-width: 1020px;
+	/*background: #ccc; Solo para ver como se centran todos los contenedores*/
+	margin: 0 auto;
+	overflow: hidden;
+
+}
+/*----------HEADER-------*/
+header{
+	background: url(../img/fondo-header.jpg) #5a5a5a;
+	background-repeat: no-repeat;
+	background-position: center;
+	max-height: 600px;
+}
+header .menu{
+	margin: 40px 0;
+	text-align: right;
+}
+header .menu a{
+	margin: 0 20px;
+	color: #fff;
+	padding-bottom: 9px;
+	font-size: 1em;
+	display: inline-block;
+	text-decoration: none;
+	border-bottom: 2px solid transparent;
+}
+header .menu a:hover{
+		border-bottom: 2px solid #fff;
+}
+header .contenedor-texto{
+	display: flex;
+	margin: 190px 0;
+	justify-content: center;
+	align-content: center;
+}
+header .contenedor-texto .texto{
+	border: 2px solid rgba(255, 255, 255, .5);
+	border-radius: 3px;
+	display: inline-block;
+	text-align: center;
+	padding: 20px 60px;
+}
+header .contenedor-texto .texto h1,
+header .contenedor-texto .texto h2{
+	color: #fff;
+	font-weight: 300;
+	margin: 0;
+}
+header .contenedor-texto .texto .nombre{
+	font-size: 50px;
+	margin-bottom: 20px;
+	line-height: 50px;
+}
+header .contenedor-texto .texto .descripcion{
+	font-size: 25px;
+	line-height: 25px;
+}
+
+/*----- --- -- MAIN --- --- -----*/
+main .contenedor{
+	overflow: visible;
+}
+main .acerca-de{
+	text-align: center;
+}
+main .acerca-de .icono-ancla{
+	margin-top: -60px;
+}
+main .acerca-de .icono-ancla img{
+	vertical-align: top;
+	border-radius: 50%;
+	border: 5px solid rgba(255, 255, 255, .2);
+}
+main .acerca-de .texto{
+	color: #5a5a5a;
+	font-weight: 600;
+	font-size: 1em;
+	line-height: 30px;
+	width: 48%;
+	margin: 40px auto 60px;
+}
+main .acerca-de .texto .titulo{
+	font-size: 34px;
+	line-height: 34px;
+	margin-bottom: 40px;
+	font-weight: 300;
+	color: #dd820d;
+	text-align: center;
+}
+main .acerca-de .texto .bold{
+	color: #3895ea;
+	text-decoration: underline;
+}
+main .galeria{
+	background: #f2f2f2;
+	padding: 60px 0;
+}
+main .galeria .contenedor{
+	overflow: hidden;
+}
+main .galeria .titulo{
+	font-size: 34px;
+	line-height: 34px;
+	margin-bottom: 40px;
+	font-weight: 300;
+	color: #dd820d;
+	text-align: center;
+}
+main .galeria .contenedor-galeria{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+main .galeria .contenedor-galeria .paisaje{
+	width: 33.33%;
+}
+main .galeria .contenedor-galeria .paisaje .thumb{
+	width: 100%;
+
+}
+main .galeria .contenedor-galeria .paisaje .thumb a:hover{
+	opacity: 0.5;
+	filter: alpha(opacity=50); 
+}
+main .galeria .contenedor-galeria .paisaje .thumb img{
+	width: 100%;
+	vertical-align: top;
+}
+/*--------FOOTER-----------------*/
+footer .arriba{
+	width: 5px;
+	position: fixed;
+	bottom: 20px;
+	right: 50px;
+	opacity: 0.3;
+	filter: alpha(opacity=30); 
+}
+footer .arriba:hover{
+	opacity: 1;
+	filter: alpha(opacity=100);
+}
+footer .contacto{
+	padding: 60px 0;
+}
+footer .contacto .titulo{
+	font-size: 34px;
+	line-height: 34px;
+	margin-bottom: 40px;
+	font-weight: 300;
+	color: #dd820d;
+	text-align: center;
+}
+
+footer .contacto .formulario{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+footer .contacto .formulario input[type="text"],
+footer .contacto .formulario input[type="email"],
+footer .contacto .formulario textarea{
+	border: 2px solid #cecece;
+	border-radius: 5px;
+	padding: 15px 20px;
+	font-size: 20px;
+	color:  #a4a4a4;
+}
+footer .contacto .formulario input[type="text"]:focus,
+footer .contacto .formulario input[type="email"]:focus,
+footer .contacto .formulario textarea:focus{
+		border: 2px solid #3895ea;
+}
+footer .contacto .formulario input[type="text"],
+footer .contacto .formulario input[type="email"]{
+	width: 49%;
+	margin-bottom: 15px;
+}
+footer .contacto .formulario textarea{
+	width: 100%;
+	height: 100px;
+	min-width: 100%;
+	max-width: 100%;
+	min-height: 100px;
+	max-height: 300px;
+	margin-bottom: 15px;
+}
+footer .contacto .formulario .boton{
+	margin: auto;
+	color:#fff;
+	background: #3895ea;
+	border: none;
+	border-radius: 3px;
+	padding: 15px 40px;
+	cursor: pointer;
+}
+footer .contacto .formulario .boton:hover{
+	background-color: #387bea;
+}
+footer .redes-sociales{
+	background: #1e2b38;
+	padding: 60px 0;
+}
+footer .redes-sociales .contenedor{
+	display: flex;
+	justify-content: center;
+}
+footer .redes-sociales a{
+	color: #fff;
+	text-align: center;
+	width: 100px;
+	display: block;
+	padding: 15px 0;
+	border-radius: 3px;
+	font-size: 30px;
+	margin: 0 20px;
+	/*background: #ccc;Lo usamos para demostracion*/
+}
+footer .redes-sociales .twitter:hover{ background: #1da1f2; }
+footer .redes-sociales .facebook:hover{ background: #3b5998 }
+footer .redes-sociales .youtube:hover{ background: #cd201f; }
+footer .redes-sociales .github:hover{ background: #6e5494; }
+footer .redes-sociales .instagram:hover{ background: #405de6; }
+
+
+/*======MEDIA QUERIES========*/
+@media screen and (max-width: 800px) {
+	header .menu{
+		text-align: center;
+	}
+	main .galeria .contenedor-galeria .paisaje{
+		width: 50%;
+	}
+}
+
+@media screen and (max-width: 550px){
+	header .contenedor-texto .texto .nombre{
+		font-size: 35px;
+	}
+	header .contenedor-texto .texto .descripcion{
+		font-size: 18px;
+	}
+	footer .redes-sociales .contenedor{
+		flex-wrap: wrap;
+		padding: 20px 0;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,66 @@
+block config
+    include ../config/config.pug
+doctype html
+html
+    head
+        meta(harset="utf-8")
+        title #{title} | #{site_Title}
+        meta(name="description" content=description)
+        link(rel="stylesheet" href="css/font-awesome.css")
+        link(rel="stylesheet" href="css/styles.css")
+    body
+        header.header
+            a(href="/")
+                img(src="img/logo.jpg" alt="logo github").logo
+            nav.menu
+                include ../blocks/menu.pug
+        main
+            div.search
+                input.inp-search(type="search" name="search")
+                a.icon-search(href="#")
+                    i(class="fa fa-search")
+            section.slider
+                include ../blocks/description_slider.pug
+            section.articles
+                article.post
+                    img(src="img/bootcamp1.jpg", alt="")
+                    h2 Bootcamp 1
+                    footer
+                        p.name Wapachos
+                        p.date Enero 20 2017
+                article.post
+                    img(src="img/bootcamp2.jpeg", alt="")
+                    h2 Bootcamp 2
+                    footer
+                        p.name Wapachos
+                        p.date Enero 20 2017
+                article.post
+                    img(src="img/bootcamp3.jpeg", alt="")
+                    h2 Bootcamp 3
+                    footer
+                        p.name Wapachos
+                        p.date Enero 20 2017
+                article.post
+                    img(src="img/bootcamp4.jpg", alt="")
+                    h2 Bootcamp 4
+                    footer
+                        p.name Wapachos
+                        p.date Enero 20 2017
+                article.post
+                    img(src="img/bootcamp5.jpg", alt="")
+                    h2 Bootcamp 5
+                    footer
+                        p.name Wapachos
+                        p.date Enero 20 2017
+                article.post
+                    img(src="img/bootcamp6.jpg", alt="")
+                    h2 Bootcamp 6
+                    footer
+                        p.name Wapachos
+                        p.date Enero 20 2017
+                footer
+                    include ../blocks/pagination.pug
+                    
+
+
+        

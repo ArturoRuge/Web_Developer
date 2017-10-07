@@ -1,0 +1,248 @@
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+h2{
+	background: #ccc;
+	text-align: center;
+	padding: 30px;
+}
+.contenedor{
+	width: 90%;
+	margin: auto;
+	display: flex;
+	justify-content: space-around;
+	padding: 40px;
+}
+.card1,
+.card2,
+.card3{
+	box-shadow: 2px 2px 8px #ccc, -2px -2px 8px #ccc;
+	border-radius: 5px;
+	padding: 20px;
+}
+
+.card1{
+	width: 20%;
+	position: relative;
+	display: block;
+	overflow: hidden;
+}
+.card1 .caption{
+	position: absolute;
+	top:-100%;
+	left: 0;
+	background: rgba(0,0,0, .5);
+	width: 100%;
+	height: 100%;
+	color: #fff;
+	font-size: 35px;
+	text-align: center;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: .3s;
+}
+.card1:hover .caption{
+	top: 0;
+} 
+
+.card1 img{
+	width: 100%;
+	display: block;
+}
+.card2{
+	width: 20%;
+	position: relative;
+	display: block;
+	overflow: hidden;
+
+}
+.card2 img{
+	width: 100%;
+	display: block;
+}
+.card2::before{
+	content: "";
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background: rgba(255, 0, 0, .5);
+	left: 0;
+	top: -100%;
+	transition: .3s ease;
+	opacity: 0;
+}
+.card2:hover::before{
+	top: 0;
+	opacity: 1;
+}
+.card2 .caption{
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	bottom: -100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+	font-size: 30px;
+	transition: .3s;
+
+}
+.card2:hover .caption{
+	bottom: 0;
+}
+.card3{
+	width: 20%;
+	position: relative;
+	overflow: hidden;
+	display: flex;
+}
+.card3::before{
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: yellow;
+	border-radius: 50%;
+	top: 50%;
+	left: -50%;
+	opacity: 0;
+	transform: scale(.1);
+	transition: .3s ease-in;
+}
+.card3:hover::before{
+	transform: scale(3);
+	opacity: .5;
+}
+.card3::after{
+	content: "Charmander";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 30px;
+	color: #fff;
+	transform: translate(-100%, 100%);
+	transition: .5s;
+	color: red;
+}
+.card3:hover::after{
+		transform: translate(0, 0);
+}
+.card3 img{
+	width: 100%;
+	display: block;
+}
+
+/*========FLIP CARD====*/
+.card-container,
+.card{
+	width: 200px;
+	height: 300px;
+	position: relative;
+	margin: 50px auto;
+	transition: all .3s;
+	transform-style: preserve-3d;
+}
+.card-container{
+	perspective: 400px;
+}
+.card-container:hover .card{
+	transform: rotateY(180deg)
+}
+.card-container:hover .back{
+	backface-visibility: visible;
+	opacity: 1;
+}
+.face{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 2em;
+	color: #fff;
+}
+.back{
+	transform: rotateY(180deg);
+	backface-visibility: hidden;
+	opacity: 0;
+	transition: .3s;
+	background: orange;
+	color: #fff;
+}
+.front{
+	background-image: url("../img/charmander.jpg");
+	backface-visibility: hidden;
+	background-size: cover;
+}
+/*====ESFERA====*/
+.conten{
+	background: yellow;
+}
+.sphere{ 
+
+	perspective: 3000px;
+	position: relative;
+	height: 300px;
+	margin: 50px;
+	animation: sphere 2s infinite linear;
+	transform-style: preserve-3d;
+}
+@keyframes sphere{
+	to{
+		transform: rotateY(1turn);
+	}
+}
+.circle{
+	width: 200px;
+	height: 200px;
+	border: 1px solid red;
+	border-radius: 50%;
+	transform: rotateY(60deg);
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+}
+.circle:nth-child(2){
+	transform: rotateY(40deg);
+}
+.circle:nth-child(3){
+	transform: rotateY(80deg);
+}
+.circle:nth-child(4){
+	transform: rotateY(120deg);
+}
+.circle:nth-child(5){
+	transform: rotateY(160deg);
+}
+.circle:nth-child(6){
+	transform: rotateY(200deg);
+}
+.circle:nth-child(7){
+	transform: rotateY(240deg);
+}
+.circle:nth-child(8){
+	transform: rotateY(280deg);
+}
+.circle:nth-child(9){
+	transform: rotateY(320deg);
+}
+
+
+
+

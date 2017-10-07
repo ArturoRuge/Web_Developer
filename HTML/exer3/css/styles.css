@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header{
+    border-bottom: 1px solid grey;
+    display: flex;
+    justify-content: space-between;
+    height: 130px;
+    padding: 0 20px;
+}
+.menu ul{
+    height: 130px;
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+.menu li.active:before{
+    content:"";
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 80px;
+    height: 3px;
+    background: grey;
+
+}
+.menu a{
+    display: block;
+    color: grey;
+    text-decoration: none;
+    padding: 5px 20px;
+    margin-left: 10px;
+    border-right: 1px solid #ccc;
+
+}
+.menu li:last-child a{
+    background: orange;
+    border-radius: 10px;
+    margin-left: 20px;
+    border-right: 1px solid transparent;
+    color: #fff;
+}
+.logo{
+   height: 100px;
+}
+.search{
+    text-align: right;
+    padding: 20px 0;    
+}
+.search .icon-search{
+    background: grey;
+    color: #fff;
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 3px;
+    margin-left: 5px;
+}
+.search .inp-search{
+    padding: 9px;
+    border: 1px solid grey;
+}
+main{
+    max-width: 90%;
+    margin: auto;
+}
+.slider{
+    height: 500px;
+    background: url("/img/github.png");
+    background-size: cover;
+    position: relative;
+}
+.description_slider{
+    width: 40%;
+    height: 200px;
+    background: rgba(255, 255, 255, .5);
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    padding: 20px;
+    color: #555;    
+}
+.description_slider footer{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+    border-top: 1px solid grey;
+    padding: 20px 0;
+}
+.articles{
+    display: flex;
+    flex-wrap: wrap;
+}
+.articles .post{
+    width: 25%;
+    margin:4%;
+}
+.post img{
+    width: 100%;
+    margin-bottom: 10px;
+}
+.post{
+    color: #555;
+}
+.post footer{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    border-top: 1px solid #ccc;
+    padding: 10px 0;
+    color: #949292;
+}
+footer{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 100px;    
+}
+footer .boton{
+    background: #E7E7E7;
+    color:#5A5A5A;
+    border: 1px solid #BEBEBE;
+    border-radius: 3px;
+    padding: 5px;
+    margin: 5px;
+    text-decoration: none;
+}
+footer .square-boton{
+    padding-left: 10px;
+    padding-right: 10px;
+    
+}
+

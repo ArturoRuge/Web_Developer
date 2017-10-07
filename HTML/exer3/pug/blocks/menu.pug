@@ -1,0 +1,6 @@
+ul
+    each page in pages
+        if page == title
+             li.active: a(href=page + ".html") #{page}
+        else 
+            li: a(href=page + ".html") #{page}

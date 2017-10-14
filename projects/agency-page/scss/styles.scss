@@ -1,0 +1,27 @@
+// variables
+
+
+// Paleta de color
+$primary-color: #DE2262;
+$secondary-color: #8D0824;
+
+//Tamaños de fuentes 
+$m: 16px; //1em (Otra opción - Aunque em cambia segun su contexto )
+$xl: 25px; //$m * 1.5
+$l: 20px; //$m * 1.25
+$s: 13px;  //$m * 0.8
+$xs: 11px; //$m * 0.7
+
+
+// Variables de layout
+
+$gutter: 16px;
+$max-width: 1200px;
+
+@import "base/normalize";
+@import "layout/layout";
+@import "theme/header";
+@import "module/modules";
+@import "base/base";
+@import "theme/menu";
+@import "theme/banner";

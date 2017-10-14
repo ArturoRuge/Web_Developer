@@ -1,0 +1,14 @@
+*,
+*::after,
+*::before{
+	box-sizing: border-box;
+}
+
+body{
+	font-size: $m;
+	font-family: 'Roboto', sans-serif;
+}
+
+img {
+	max-width: 100%;
+}

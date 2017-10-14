@@ -1,0 +1,96 @@
+.main-banner{
+	position: relative;
+
+	&__img{
+		display: block;
+	}
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(to left, $primary-color 20%, $secondary-color);
+		opacity: .4;
+	}
+
+	&__data{
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		position: absolute;
+		width: 65%;
+		top: 50%;
+		left: 2em;
+		transform: translateY(-50%);
+
+		@media screen and (min-width: 640px){
+			width: 50%;
+		}
+
+		@media screen and (max-width: 768px){
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			justify-content: space-around;		
+		}
+	}
+
+	&__title{
+		color: $primary-color;
+		text-align: center;
+		width: 100%;
+		margin: 0 0 .5em;
+		background: linear-gradient(
+			to right,
+			hsla(0, 100, 100, .7), 
+			hsla(0, 100, 100, 0));
+		padding: .2em;
+		border-radius: .5em;
+
+		@media screen and (min-width: 768px){
+			text-align: left;
+			font-size: 2.2em;
+		}
+		@media screen and (max-width: 768px){
+			background: linear-gradient(
+			to right,
+			hsla(0, 100, 100, 0),
+			hsla(0, 100, 100, .9),
+			hsla(0, 100, 100, 0)) 
+		}
+	}
+
+	&__subtitle,
+	&__description{
+		color: #fff;	
+		@media screen and (max-width: 768px){
+			display: none;
+		}
+	}
+
+	&__subtitle{
+		font-size: 1.4em;
+		margin: 0;
+
+		&::after{
+			content: "";
+			display: block;
+			height: 2px;
+			width: 20%;
+			background: $primary-color;
+
+		}
+	}
+
+	.description{
+		font-size: $s;
+	}
+
+	.button{
+		@media screen and (min-width: 768px){
+			margin-right: 1em;
+		}
+	}
+}

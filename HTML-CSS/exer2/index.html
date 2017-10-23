@@ -2,6 +2,8 @@
 <html lang="es">
 <head>
     <meta charset="utf-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no" />
     <title>Invie - Tus mejores guitarras!!</title> 
     
     <link href="https://fonts.googleapis.com/css?family=Allerta|Roboto" rel="stylesheet">
@@ -12,9 +14,10 @@
     <section id="portada" class="portada background"> <!-- portada -->
     <header id="header" class="header contenedor"> <!-- header -->
         <figure class="logotipo"> <!-- logotipo -->
-            <img src="images/invie.png" with="186" height="60" alt="Logo Invie">
+            <img src="images/invie.png" srcset="images/invie.png 1x, images/invie2x.png 2x" with="186" height="60" alt="Logo Invie"> 
         </figure>
-        <nav class="menu"> <!-- menu -->
+        <span class="burguer-button icon-menu" id="burguer-button"></span>
+        <nav class="menu" id="menu"> <!-- menu -->
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="#guitarras">Guitarras</a></li>
@@ -30,8 +33,11 @@
     </section>
     <section id="guitarras" class="guitarras contenedor">
         <h2>Nuestras Guitarras</h2>
+        <div class="video-responsive-contenedor">
+            <iframe class="video-responsive-src" width="560" height="315" src="https://www.youtube.com/embed/R1dW8M4EqYY" frameborder="0" allowfullscreen></iframe>
+        </div>
         <article class="guitarra">
-            <img class="right" src="images/invie-acustica.png" alt="Guitarra Invie acústica" width="350">
+            <img class="right" data-src="images/invie-acustica.png|images/invie-acustica2x.png" alt="Guitarra Invie acústica" width="350"> <!-- ====Imagen que carga con lazy load tambien soporta RETINA usando | ========-->
             <div class="contenedor-guitarra-a">
                 <h3 class="title-b">Invie Acústica</h3>
                 <ol>
@@ -42,7 +48,7 @@
             </div>
         </article>
         <article class="guitarra b">
-            <img class="left" src="images/invie-classic.png" alt="Guitarra invie classic" width="350">
+            <img class="left" data-src="images/invie-classic.png|images/invie-classic2x.png" alt="Guitarra invie classic" width="350"> <!--data-src es para utilizar lazy.js -->
             <div class="contenedor-guitarra-b">
                 <h3 class="title-b">Invie Classic</h3>
                 <ol>
@@ -56,7 +62,7 @@
     <footer class="footer">
         <div class="contenedor">
             <div class="contacto">
-                <img src="images/invie-white.png" alt="Logo Invie">
+                <img data-src="images/invie-white.png|images/invie-white2x.png" alt="Logo Invie">
                 <a href="tel:+57310928374"><strong>Teléfono</strong><span>310928374</span></a>
                 <a href="mailto:contacto@invie.com"><strong>Email</strong><span>contacto@invie.com</span></a>
             </div>
@@ -97,5 +103,36 @@
             </form>
         </div>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.8.2/blazy.min.js"></script>
+    <script>
+        var consulta = window.matchMedia("(max-width: 500px)");
+        consulta.addListener(mediaQuery);
+
+        var $burguerButton = document.getElementById("burguer-button") ;
+        var $menu = document.getElementById("menu");
+        function toogleMenu(){
+                    $menu.classList.toggle("active")
+                }
+
+        function mediaQuery(){
+            if(consulta.matches){
+                console.log("se cumplo");
+                $burguerButton.addEventListener("touchstart", toogleMenu) ;  
+            }else{
+                console.log("NO se cumplio");
+                $burguerButton.removeEventListener("touchstart", toogleMenu);
+
+            }    
+        }
+        
+        mediaQuery();
+
+        //Lazy loading
+
+        var blazy = new Blazy({
+            selector: "img"
+        });
+        
+    </script>
 </body>
 </html>

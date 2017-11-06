@@ -1,0 +1,14 @@
+.main-header{
+  background: color(azul-medio);
+  color: color(blanco);
+  display: flex;
+  padding: 0 $gutter;
+  height: rem(50px);
+  line-height: rem(50px);
+  font-size: 1.5rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 20;
+  border-bottom: 1px solid rgba(color(azul-oscuro), .2);
+}

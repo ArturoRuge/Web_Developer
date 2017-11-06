@@ -1,0 +1,20 @@
+// Menu principal
+
+.main-menu {
+  list-style: none;
+  margin: ($gutter * 2) 0 0;
+  padding-left: $gutter;
+  padding-right: $gutter;
+
+
+  &__link {
+    color: rgba(color(blanco), .7);
+    text-decoration: none;
+    display: block;
+    text-transform: uppercase;
+    font-weight: $light;
+    line-height: 3em;
+    font-size: 1.2em;
+    border-bottom: 1px solid rgba(color(blanco), .3)
+  }
+}

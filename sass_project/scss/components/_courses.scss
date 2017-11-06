@@ -1,0 +1,47 @@
+// vista de todos los cursos
+
+.course-card {
+	margin-left: $gutter;
+	margin-right: $gutter;
+	margin-bottom: $gutter * 2;
+	position: relative;
+	
+	&__img{
+		display: block;
+	}
+
+	&__footer{
+		position: absolute;
+		width: 100%;
+		bottom:0;
+		height: rem(35px);
+		background: rgba(#000, .6);
+		color: color(blanco);
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 $gutter;
+		font-size: .85em;
+	}
+	&__progress {
+		display: flex;
+		&__bar{
+			border: 1px solid color(blanco);
+			width: rem(70px);
+			height: rem(16px);
+			margin-right: .5em;
+			background: linear-gradient(120deg, color(rojo) 70%, transparent 70%
+				);
+		}
+	}
+    .icon-star {
+      position: absolute;
+      top: 1em;
+      left: 1em;
+      text-decoration: none;
+      color: color(azul-claro);
+      z-index: 10;
+    }
+
+}
+

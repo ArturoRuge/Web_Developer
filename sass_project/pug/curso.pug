@@ -1,0 +1,32 @@
+extends templates/_template
+
+append config
+    -currentPage = "course-page"
+    -title = "Sass desde Cero"
+
+block header
+    include block/_header
+
+
+block main
+    header.course-header
+        img(src="img/course-poster.jpg")
+        .course-header__teacher
+            img(src="img/teacher.png" width="150").course-header__teacher__img
+            .course-header__teacher__data
+                .course-header__teacher__name Alvero Javier
+                    small Profesor
+                a(href="#").course-header__teacher__ask.button.cta Solicitar Asesoria
+
+    .content
+        h2.content-title Contenido del Curso
+
+        .course-content
+            .icon-play.course-content__item 01. Introducción a Sass
+            .icon-play.course-content__item 02. Introducción a Sass
+            .icon-play.course-content__item 03. Introducción a Sass
+            .icon-play.course-content__item 04. Introducción a Sass
+            .icon-play.course-content__item 05. Introducción a Sass
+            .icon-play.course-content__item 06. Introducción a Sass
+            .icon-play.course-content__item 07. Introducción a Sass
+            .icon-play.course-content__item 08. Introducción a Sass

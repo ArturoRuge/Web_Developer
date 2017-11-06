@@ -1,0 +1,55 @@
+// Pantalla de inicio de sesion
+
+.login-page{
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background: img("home-bg.jpg") center / cover;
+}
+
+.main-home{
+  margin-top: -80px;
+}
+
+.logo{
+  width: em(332px / 2);
+  display: block;
+  margin: 0 auto;
+}
+
+//Formulario de inicio
+.login-form{
+  width: em(560px / 2);
+  margin: 2em auto;
+  &__item{
+    position: relative;
+    margin-bottom: 1em;
+  }
+  &__input{
+    display: block;
+    width: 100%;
+    height: 1.5rem;
+    line-height: 1.5rem;
+  }
+  &__label{
+    display: block;
+    position: absolute;
+    line-height: 1.5rem;
+    padding-left: 1em;
+    font-size: .9em;
+  }
+  &__submit{
+    display: block;
+    margin: auto;
+  }
+}
+
+.reset-password{
+  text-align: center;
+  a{
+    color: color(rojo);
+    display: inline-block;
+    margin-left: .5em;
+  }
+}
